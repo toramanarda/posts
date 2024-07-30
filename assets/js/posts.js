@@ -6,10 +6,9 @@ async function getData(postId) {
   postContentItem.innerHTML += `<div class="postContent">
         <h2>${post.title}</h2> 
         <p>${post.body}</p>
-        <ul id="list" class="list"></ul>
+        <ul id="list" class="list">${comments.map(x => `<li>${x.user.fullName} said : ${x.body}</li>`).join('')}</ul>
        </div>`;
 
-  list.innerHTML += comments.map(x => `<li>${x.user.fullName} said : ${x.body}</li>`).join('');
 }
 
 for (let i = 1; i <= 30; i++) {
