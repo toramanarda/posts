@@ -66,6 +66,15 @@ h6 {
   font-size: 40px;
 }
 
+.postContentItem {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+}
+
 
 .postContent {
   background-color: #E4C1F9;
@@ -93,7 +102,7 @@ h6 {
   text-align: center;
 }
 
-@media(width >=375px) {
+@media(width <= 768px) {
   .postContentItem {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
